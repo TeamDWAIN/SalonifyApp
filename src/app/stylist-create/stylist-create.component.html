@@ -1,0 +1,29 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/stylists']"><mat-icon>list</mat-icon></a>
+</div>
+<form [formGroup]="stylistForm" (ngSubmit)="onFormSubmit(stylistForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="First Name" formControlName="firstname"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!stylistForm.get('firstname').valid && stylistForm.get('firstname').touched">Please enter first name</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Last Name" formControlName="lastname"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!stylistForm.get('lastname').valid && stylistForm.get('lastname').touched">Please enter Last Name</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Specialties" formControlName="specialties"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!stylistForm.get('specialties').valid && stylistForm.get('specialties').touched">Please enter Stylist Specialties</span>
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!stylistForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+  </div>
+</form>

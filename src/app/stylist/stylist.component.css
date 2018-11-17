@@ -1,0 +1,33 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    overflow: auto;
+  }
+  
+  .firstname-col {
+    flex: 0 0 100px !important;
+    white-space: unset !important;
+  }
+  
+  .button-row {
+    margin: 10px 0;
+  }
+  
+  .header {
+    text-align: center;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .select {
+    text-align: center;
+
+  }

@@ -1,0 +1,25 @@
+
+
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/stylists']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{stylist.firstname}} {{stylist.lastname}}</h2></mat-card-title>
+    
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>First Name:</dt>
+      <dd>{{stylist.firstname}}</dd>
+      <dt>Last Name:</dt>
+      <dd>{{stylist.lastname}}</dd>
+      <dt>Specialties:</dt>
+      <dd>{{stylist.specialties}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/stylist-edit', stylist._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteStylist(stylist._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>
