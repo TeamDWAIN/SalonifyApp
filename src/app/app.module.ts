@@ -21,8 +21,14 @@ import { StylistComponent } from './stylist/stylist.component';
 import { StylistDetailComponent } from './stylist-detail/stylist-detail.component';
 import { StylistCreateComponent } from './stylist-create/stylist-create.component';
 import { StylistEditComponent } from './stylist-edit/stylist-edit.component';
+import {HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: { title: 'Home' }
+  }, 
   {
     path: 'stylists',
     component: StylistComponent,
