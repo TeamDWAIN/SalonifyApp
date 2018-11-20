@@ -21,14 +21,12 @@ import { StylistComponent } from './stylist/stylist.component';
 import { StylistDetailComponent } from './stylist-detail/stylist-detail.component';
 import { StylistCreateComponent } from './stylist-create/stylist-create.component';
 import { StylistEditComponent } from './stylist-edit/stylist-edit.component';
-import {HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { PostsComponent } from './posts/posts.component';
+import { RequestsComponent } from './requests/requests.component';
 
 const appRoutes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent,
-    data: { title: 'Home' }
-  }, 
   {
     path: 'stylists',
     component: StylistComponent,
@@ -45,12 +43,22 @@ const appRoutes: Routes = [
     data: { title: 'Create Stylist' }
   },
   {
+    path: 'posts',
+    component: PostsComponent,
+    data: { title: 'News and posts' }
+  },
+  {
+    path: 'requests',
+    component: RequestsComponent,
+    data: { title: 'Request an appointment' }
+  },
+  {
     path: 'stylist-edit/:id',
     component: StylistEditComponent,
     data: { title: 'Edit Stylist' }
   },
   { path: '',
-    redirectTo: '/stylists',
+    component: HomeComponent,
     pathMatch: 'full'
   },
 ];
@@ -61,7 +69,11 @@ const appRoutes: Routes = [
     StylistComponent,
     StylistDetailComponent,
     StylistCreateComponent,
-    StylistEditComponent
+    StylistEditComponent,
+    HomeComponent,
+    SidebarComponent,
+    RequestsComponent,
+    PostsComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
