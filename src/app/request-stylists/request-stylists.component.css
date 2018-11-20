@@ -1,0 +1,13 @@
+.header{
+    background-color: blue;
+}
+
+ul {
+    padding: 0;
+}
+
+li:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}

@@ -10,6 +10,7 @@ mongoose.connect('mongodb://cvaldez:dwain1@ds161913.mlab.com:61913/salonify')
   .catch((err) => console.error(err));
 
 var apiRouter = require('./routes/stylist');
+var stylistRouter = require('./routes/stylist');
 
 var app = express();
 
@@ -17,19 +18,18 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist/mean-angular6')));
-app.use('/stylists', express.static(path.join(__dirname, 'dist/mean-angular6')));
-app.use('/stylist-details/:id', express.static(path.join(__dirname, 'dist/mean-angular6')));
-app.use('/stylist-create', express.static(path.join(__dirname, 'dist/mean-angular6')));
-app.use('/stylist-edit/:id', express.static(path.join(__dirname, 'dist/mean-angular6')));
 app.use('/api', apiRouter);
+app.use('/api/stylist', stylistRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use('*', function(req, res, next) {
+  res.sendFile(path.join(__dirname + '/dist/mean-angular6/index.html'));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
+  console.log(err);
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

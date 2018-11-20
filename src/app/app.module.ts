@@ -21,6 +21,8 @@ import { StylistComponent } from './stylist/stylist.component';
 import { StylistDetailComponent } from './stylist-detail/stylist-detail.component';
 import { StylistCreateComponent } from './stylist-create/stylist-create.component';
 import { StylistEditComponent } from './stylist-edit/stylist-edit.component';
+import { RequestStylistsComponent } from './request-stylists/request-stylists.component';
+
 
 const appRoutes: Routes = [
   {
@@ -47,6 +49,10 @@ const appRoutes: Routes = [
     redirectTo: '/stylists',
     pathMatch: 'full'
   },
+  {
+    path: 'request-stylists',
+    component: RequestStylistsComponent,
+  },
 ];
 
 @NgModule({
@@ -55,7 +61,8 @@ const appRoutes: Routes = [
     StylistComponent,
     StylistDetailComponent,
     StylistCreateComponent,
-    StylistEditComponent
+    StylistEditComponent,
+    RequestStylistsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
