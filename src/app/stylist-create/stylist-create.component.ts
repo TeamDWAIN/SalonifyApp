@@ -6,7 +6,7 @@ import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Valida
 @Component({
   selector: 'app-stylist-create',
   templateUrl: './stylist-create.component.html',
-  styleUrls: ['./stylist-create.component.css']
+  styleUrls: ['./stylists.component.scss']
 })
 export class StylistCreateComponent implements OnInit {
 
@@ -14,7 +14,7 @@ export class StylistCreateComponent implements OnInit {
   firstname:string='';
   lastname:string='';
   specialties:string='';
-  
+
 
   constructor(private router: Router, private api: ApiService, private formBuilder: FormBuilder) { }
 
@@ -23,7 +23,7 @@ export class StylistCreateComponent implements OnInit {
       'firstname' : [null, Validators.required],
       'lastname' : [null, Validators.required],
       'specialties' : [null, Validators.required],
-      
+
     });
   }
 

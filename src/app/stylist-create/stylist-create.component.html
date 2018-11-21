@@ -2,22 +2,27 @@
   <a mat-raised-button color="primary" [routerLink]="['/stylists']"><mat-icon>list</mat-icon></a>
 </div>
 <form [formGroup]="stylistForm" (ngSubmit)="onFormSubmit(stylistForm.value)">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="First Name" formControlName="firstname"
+  <mat-form-field>
+    <label> First Name </label>
+    <input matInput style="border:1px solid #ff0000" formControlName="firstname"
            [errorStateMatcher]="matcher">
     <mat-error>
       <span *ngIf="!stylistForm.get('firstname').valid && stylistForm.get('firstname').touched">Please enter first name</span>
     </mat-error>
   </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Last Name" formControlName="lastname"
+  <mat-form-field>
+    <br/>
+    <label> Last Name </label>
+    <input matInput style="border:1px solid #ff0000" formControlName="lastname"
            [errorStateMatcher]="matcher">
     <mat-error>
       <span *ngIf="!stylistForm.get('lastname').valid && stylistForm.get('lastname').touched">Please enter Last Name</span>
     </mat-error>
   </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Specialties" formControlName="specialties"
+  <mat-form-field>
+    <br/>
+    <label> Specialties </label>
+    <input matInput style="border:1px solid #ff0000" formControlName="specialties"
            [errorStateMatcher]="matcher">
     <mat-error>
       <span *ngIf="!stylistForm.get('specialties').valid && stylistForm.get('specialties').touched">Please enter Stylist Specialties</span>

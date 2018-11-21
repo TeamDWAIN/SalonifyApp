@@ -1,0 +1,28 @@
+<nav>
+  <ul [@list]="sidebar$">
+      <li>
+          <a routerLink="" [class.activated]="currentUrl == '/'">
+            <i class="material-icons"><i class="material-icons">
+                home
+                </i></i>
+          </a>
+        </li>
+        <li>
+          <a routerLink="stylists" [class.activated]="currentUrl == '/stylists'">
+            <i class="material-icons">supervised_user_circle</i>
+          </a>
+        </li>
+          <li>
+            <a routerLink="posts" [class.activated]="currentUrl == '/posts'">
+              <i class="material-icons">message</i>
+            </a>
+          </li>
+            <li>
+                <a routerLink="requests" [class.activated]="currentUrl == '/requests'">
+                    <i class="material-icons">
+                        email
+                        </i>
+                </a>
+              </li>
+  </ul>
+</nav>

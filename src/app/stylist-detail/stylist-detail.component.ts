@@ -6,7 +6,7 @@ import { ApiService } from '../api.service';
 @Component({
   selector: 'app-stylist-detail',
   templateUrl: './stylist-detail.component.html',
-  styleUrls: ['./stylist-detail.component.css']
+  styleUrls: ['./stylists.component.scss']
 })
 export class StylistDetailComponent implements OnInit {
 

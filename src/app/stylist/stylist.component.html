@@ -1,12 +1,9 @@
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.scss">
 <div class="w3-container w3-teal">
   <h1 class="header">Salonify</h1>
 </div>
 <div class="select">Select a Stylist below to request an appt</div>
-<div class="button-row">
-  <a mat-raised-button color="primary" [routerLink]="['/stylist-create']"><mat-icon>add</mat-icon></a>
-</div>
 <div class="example-container mat-elevation-z8">
   <table mat-table #table [dataSource]="dataSource">
 
@@ -34,4 +31,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/stylist-details/', row._id]"></tr>
   </table>
+  <br/>
+  <br/>
+  <div class="button-row">
+    <p>Add a new Stylist <a mat-raised-button color="primary" [routerLink]="['/stylist-create']"><mat-icon>add</mat-icon></a> </p>
+  </div>
 </div>

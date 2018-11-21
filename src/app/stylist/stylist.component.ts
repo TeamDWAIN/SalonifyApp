@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-stylist',
   templateUrl: './stylist.component.html',
-  styleUrls: ['./stylist.component.css']
+  styleUrls: ['./stylists.component.scss']
 })
 export class StylistComponent implements OnInit {
   stylists: any;
@@ -25,7 +25,7 @@ export class StylistComponent implements OnInit {
       });
   }
 }
- 
+
 export class StylistDataSource extends DataSource<any> {
   constructor(private api: ApiService) {
     super()
