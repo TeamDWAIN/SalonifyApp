@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
+import { routerTransition } from '../app/router.animation';
 
 @Component({
   selector: 'app-root',
-<<<<<<< HEAD
-  templateUrl: './app.component.html', 
-  styleUrls: ['./app.component.css',]
-=======
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
->>>>>>> 3068ba1799a7c831e87fe684630afdda673a43ab
+  styleUrls: ['./app.component.scss'],
+  animations: [routerTransition()]
 })
 export class AppComponent {
   title = 'app';
