@@ -6,10 +6,15 @@
    <div class ='header'>
    <h1>Welcome to Salonify</h1>
    </div>
+   <form>
    <h2>Choose your Stylist</h2>
-   <ul>
-      <li *ngFor="let stylist of stylists">{{stylist}}</li>
-   </ul>
+   <br>
+   <select name="stylist" form="picstylist">
+      <option value="Paulina">Paulina Mayers</option>
+      <option value="Eric">Eric Mitchley</option>
+      <option value="Theresa">Theresa Soliday</option>
 
+   </select>
+   </form>
 
 </body>

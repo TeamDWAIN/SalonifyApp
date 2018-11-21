@@ -21,15 +21,11 @@ import { StylistComponent } from './stylist/stylist.component';
 import { StylistDetailComponent } from './stylist-detail/stylist-detail.component';
 import { StylistCreateComponent } from './stylist-create/stylist-create.component';
 import { StylistEditComponent } from './stylist-edit/stylist-edit.component';
-<<<<<<< HEAD
 import { RequestStylistsComponent } from './request-stylists/request-stylists.component';
-
-=======
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostsComponent } from './posts/posts.component';
 import { RequestsComponent } from './requests/requests.component';
->>>>>>> 3068ba1799a7c831e87fe684630afdda673a43ab
 
 const appRoutes: Routes = [
   {
@@ -79,14 +75,11 @@ const appRoutes: Routes = [
     StylistDetailComponent,
     StylistCreateComponent,
     StylistEditComponent,
-<<<<<<< HEAD
-    RequestStylistsComponent
-=======
+    RequestStylistsComponent,
     HomeComponent,
     SidebarComponent,
     RequestsComponent,
     PostsComponent,
->>>>>>> 3068ba1799a7c831e87fe684630afdda673a43ab
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
