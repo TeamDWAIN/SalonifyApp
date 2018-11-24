@@ -7,7 +7,6 @@ body {
 
 .topnav {
     overflow: hidden;
-    font-size: 32px;
     padding: 25px;  
 }
 
@@ -18,7 +17,9 @@ body {
 }
 
    #content {
-       padding: 30px 50px;
+       padding: 5px 50px;
+       margin: auto;
+
 
        ul {
            list-style-type: none;
