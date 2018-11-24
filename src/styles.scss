@@ -1,8 +1,14 @@
 body {
     margin: 0;
-    background: #F2F2F2;
+    background: rgb(139, 139, 139);
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
+}
+
+.topnav {
+    overflow: hidden;
+    font-size: 32px;
+    padding: 25px;  
 }
 
 
