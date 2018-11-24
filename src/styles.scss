@@ -5,10 +5,11 @@ body {
     height: 100vh;
 }
 
+
 #container {
    display: grid;
    grid-template-columns: 70px auto;
-   
+}
 
    #content {
        padding: 30px 50px;
@@ -45,4 +46,3 @@ body {
            }
        }
    }
-}
