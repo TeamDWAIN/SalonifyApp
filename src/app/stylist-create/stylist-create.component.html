@@ -2,7 +2,7 @@
 <form [formGroup]="stylistForm" (ngSubmit)="onFormSubmit(stylistForm.value)">
     <mat-form-field>
       <p>FirstName</p>
-      <input id="f" matInput style="border:1px solid #ff0000" formControlName="firstname" 
+      <input id="f" matInput style="border:1px solid #000000" formControlName="firstname" 
              [errorStateMatcher]="matcher">
       <mat-error>
         <span *ngIf="!stylistForm.get('firstname').valid && stylistForm.get('firstname').touched">Please enter first name</span>
@@ -10,7 +10,7 @@
     </mat-form-field>
     <mat-form-field>
      <p>LastName</p>
-      <input id="l" matInput style="border:1px solid #ff0000" formControlName="lastname" 
+      <input id="l" matInput style="border:1px solid #000000" formControlName="lastname" 
              [errorStateMatcher]="matcher"><br/>
       <mat-error>
         <span *ngIf="!stylistForm.get('lastname').valid && stylistForm.get('lastname').touched" >Please enter Last Name</span>
@@ -19,7 +19,7 @@
     <mat-form-field>
   
      <p>Specialties</p>
-      <input id="s" matInput style="border:1px solid #ff0000" formControlName="specialties"
+      <input id="s" matInput style="border:1px solid #000000" formControlName="specialties"
              [errorStateMatcher]="matcher"><br/>
       <mat-error>
         <span *ngIf="!stylistForm.get('specialties').valid && stylistForm.get('specialties').touched">Please enter Stylist Specialties</span>
