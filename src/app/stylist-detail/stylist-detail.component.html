@@ -1,6 +1,6 @@
-
-
-
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/stylists']"><mat-icon>list</mat-icon></a>
+</div>
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title><h2>{{stylist.firstname}} {{stylist.lastname}}</h2></mat-card-title>
@@ -21,3 +21,5 @@
     <a mat-raised-button color="warn" (click)="deleteStylist(stylist._id)"><mat-icon>delete</mat-icon></a>
   </mat-card-actions>
 </mat-card>
+
+

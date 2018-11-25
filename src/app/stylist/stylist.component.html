@@ -1,11 +1,8 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+</head>
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.scss">
-<div class="w3-container w3-teal">
-</div>
-<br/>
-<div class="select">Select a Stylist below to request an appt</div>
-<br/>
-<br/>
+<h3>Our talented Stylists ...</h3>
 <div class="example-container mat-elevation-z8">
   <table mat-table #table [dataSource]="dataSource">
 
@@ -13,24 +10,24 @@
           The actual rendered columns are set as a property on the row definition" -->
 
     <!-- Title Column -->
-    <ng-container matColumnDef="firstname" name="firstname" placeholder="firstname"> 
-      <th mat-header-cell *matHeaderCellDef></th>
+    <ng-container matColumnDef="firstname">
+     
       <td mat-cell *matCellDef="let element" class="firstname-col"> {{element.firstname}} </td>
     </ng-container>
 
     <!-- Title Column -->
-    <ng-container matColumnDef="lastname" name="Lastname" placeholder="Lastname">
-      <th mat-header-cell *matHeaderCellDef> </th>
+    <ng-container matColumnDef="lastname">
+    
       <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
     </ng-container>
 
     <!-- Author Column -->
-    <ng-container matColumnDef="specialties" name="Specialties" placeholder="Specialties">
-      <th mat-header-cell *matHeaderCellDef></th>
+    <ng-container matColumnDef="specialties">
+    
       <td mat-cell *matCellDef="let element">Specialties: {{element.specialties}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/stylist-details/', row._id]"></tr>
   </table>
   <br/>
@@ -39,3 +36,4 @@
     <p>Add a new Stylist <a mat-raised-button color="primary" [routerLink]="['/stylist-create']"><mat-icon>add</mat-icon></a> </p>
   </div>
 </div>
+
