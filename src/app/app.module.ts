@@ -82,7 +82,6 @@ const appRoutes: Routes = [
     RequestsComponent,
     PostsComponent,
     RequestStylistsComponent,
-    
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
