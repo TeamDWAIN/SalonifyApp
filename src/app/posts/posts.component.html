@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Posts</title>
+<title>Reviews</title>
 </head>
 <body>
-
-<h1>Posts</h1>
-
+<h1>Reviews</h1>
+<form action="Review">
+  <input type="text" name="yourname" placeholder="Your name"><br>
+  <input type="text" name="yourreview" placeholder="Your review"><br>
+  <input type="submit" value="Submit">
+</form>
 <ul [@listStagger]="posts$">
   <li *ngFor="let post of posts$">
     <a routerLink="">{{ post.title }}</a>
-
     <p>{{ post.body }}</p>
   </li>
 </ul>

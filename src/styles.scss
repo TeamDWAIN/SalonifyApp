@@ -1,17 +1,25 @@
 body {
     margin: 0;
-    background: #F2F2F2;
+    background: rgb(139, 139, 139);
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
 }
 
+.topnav {
+    overflow: hidden;
+    padding: 25px;  
+}
+
+
 #container {
    display: grid;
    grid-template-columns: 70px auto;
-   
+}
 
    #content {
-       padding: 30px 50px;
+       padding: 5px 50px;
+       margin: auto;
+
 
        ul {
            list-style-type: none;
@@ -45,4 +53,7 @@ body {
            }
        }
    }
+
+   .hide {
+    visibility: hidden;
 }

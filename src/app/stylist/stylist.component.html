@@ -1,9 +1,8 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+</head>
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.scss">
-<div class="w3-container w3-teal">
-  <h1 class="header">Salonify</h1>
-</div>
-<div class="select">Select a Stylist below to request an appt</div>
+<h3>Our talented Stylists ...</h3>
 <div class="example-container mat-elevation-z8">
   <table mat-table #table [dataSource]="dataSource">
 
@@ -12,23 +11,23 @@
 
     <!-- Title Column -->
     <ng-container matColumnDef="firstname">
-      <th mat-header-cell *matHeaderCellDef> First Name </th>
+     
       <td mat-cell *matCellDef="let element" class="firstname-col"> {{element.firstname}} </td>
     </ng-container>
 
     <!-- Title Column -->
     <ng-container matColumnDef="lastname">
-      <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    
       <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
     </ng-container>
 
     <!-- Author Column -->
     <ng-container matColumnDef="specialties">
-      <th mat-header-cell *matHeaderCellDef> Specialties </th>
+    
       <td mat-cell *matCellDef="let element">Specialties: {{element.specialties}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/stylist-details/', row._id]"></tr>
   </table>
   <br/>
@@ -37,3 +36,4 @@
     <p>Add a new Stylist <a mat-raised-button color="primary" [routerLink]="['/stylist-create']"><mat-icon>add</mat-icon></a> </p>
   </div>
 </div>
+

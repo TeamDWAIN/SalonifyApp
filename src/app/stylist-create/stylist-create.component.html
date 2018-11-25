@@ -1,34 +1,35 @@
-<div class="button-row">
-  <a mat-raised-button color="primary" [routerLink]="['/stylists']"><mat-icon>list</mat-icon></a>
-</div>
+
 <form [formGroup]="stylistForm" (ngSubmit)="onFormSubmit(stylistForm.value)">
-  <mat-form-field>
-    <label> First Name </label>
-    <input matInput style="border:1px solid #ff0000" formControlName="firstname"
-           [errorStateMatcher]="matcher">
-    <mat-error>
-      <span *ngIf="!stylistForm.get('firstname').valid && stylistForm.get('firstname').touched">Please enter first name</span>
-    </mat-error>
-  </mat-form-field>
-  <mat-form-field>
+    <mat-form-field>
+      <p>FirstName</p>
+      <input id="f" matInput style="border:1px solid #000000" formControlName="firstname" 
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!stylistForm.get('firstname').valid && stylistForm.get('firstname').touched">Please enter first name</span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+     <p>LastName</p>
+      <input id="l" matInput style="border:1px solid #000000" formControlName="lastname" 
+             [errorStateMatcher]="matcher"><br/>
+      <mat-error>
+        <span *ngIf="!stylistForm.get('lastname').valid && stylistForm.get('lastname').touched" >Please enter Last Name</span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+  
+     <p>Specialties</p>
+      <input id="s" matInput style="border:1px solid #000000" formControlName="specialties"
+             [errorStateMatcher]="matcher"><br/>
+      <mat-error>
+        <span *ngIf="!stylistForm.get('specialties').valid && stylistForm.get('specialties').touched">Please enter Stylist Specialties</span>
+      </mat-error>
+    </mat-form-field>
     <br/>
-    <label> Last Name </label>
-    <input matInput style="border:1px solid #ff0000" formControlName="lastname"
-           [errorStateMatcher]="matcher">
-    <mat-error>
-      <span *ngIf="!stylistForm.get('lastname').valid && stylistForm.get('lastname').touched">Please enter Last Name</span>
-    </mat-error>
-  </mat-form-field>
-  <mat-form-field>
     <br/>
-    <label> Specialties </label>
-    <input matInput style="border:1px solid #ff0000" formControlName="specialties"
-           [errorStateMatcher]="matcher">
-    <mat-error>
-      <span *ngIf="!stylistForm.get('specialties').valid && stylistForm.get('specialties').touched">Please enter Stylist Specialties</span>
-    </mat-error>
-  </mat-form-field>
-  <div class="button-row">
-    <button type="submit" [disabled]="!stylistForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
-  </div>
-</form>
+    <br/>
+    <br/>
+    <div class="button-row">
+      <button type="submit" [disabled]="!stylistForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+    </div>
+  </form>
